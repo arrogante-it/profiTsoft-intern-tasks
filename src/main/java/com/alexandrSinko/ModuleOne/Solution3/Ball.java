@@ -1,15 +1,17 @@
 package com.alexandrSinko.ModuleOne.Solution3;
 
-public class Ball extends Figure{
+public class Ball implements Figure{
 
     private int radius;
+
+    private static final double VARIABLE = 1.3333333;
 
     public Ball(int radius) {
         this.radius = radius;
     }
 
     @Override
-    double getFigureVolume() {
-        return 1.3333333 * Math.PI * (radius * radius * radius);
+    public double getFigureVolume() {
+        return VARIABLE * Math.PI * (radius * radius * radius);
     }
 }

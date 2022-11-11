@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SolutionTest {
+public class FigureSorterTest {
 
     @Test
     void sortingFigures() {
@@ -18,7 +18,7 @@ public class SolutionTest {
         List<Figure> list = new ArrayList<>();
         Collections.addAll(list, ball, cube, cylinder);
 
-        List<Double> expected = Solution.sortingFigures(list);
+        List<Double> expected = FigureSorter.sortingFigures(list);
 
         List<Double> actual = new ArrayList<>();
         actual.add(113097.33270179917);    // ball

@@ -1,6 +1,6 @@
 package com.alexandrSinko.ModuleOne.Solution3;
 
-public class Cylinder extends Figure{
+public class Cylinder implements Figure{
 
     private int height;
 
@@ -12,7 +12,7 @@ public class Cylinder extends Figure{
     }
 
     @Override
-    double getFigureVolume() {
+    public double getFigureVolume() {
         return Math.PI * (radius*radius) + height;
     }
 }

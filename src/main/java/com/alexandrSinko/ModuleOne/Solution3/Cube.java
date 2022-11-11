@@ -1,6 +1,6 @@
 package com.alexandrSinko.ModuleOne.Solution3;
 
-public class Cube extends Figure {
+public class Cube implements Figure {
 
     private int a;
 
@@ -9,7 +9,7 @@ public class Cube extends Figure {
     }
 
     @Override
-    double getFigureVolume() {
+    public double getFigureVolume() {
         return a * a * a;
     }
 }

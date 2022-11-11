@@ -1,44 +1,35 @@
 package com.alexandrSinko.ModuleOne.Solution2;
 
-// ProfiTsoft, task 2.
-// Write a method that accepts as input a list of strings (text)
-// that can contain hash tags (words starting with "").
-// As a result, the method should return the top-5 most frequently mentioned hash tags,
-// with the number of times each hash tag was mentioned.
-// Multiple #same hashtags on the same line should count as one mention.
-// Write unit tests for this method.
-
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Comparator;
 import java.util.stream.Collectors;
 
-public class Solution {
-
-    public static void main(String[] args) {
-
-        List<String> list = new ArrayList<>();
-        Collections.addAll(list, "qwe", "#qwe", "#qq", "#qq", "#qwe", "#eeee"
-                , "#qwerty", "qwe", "eqe", "www", "wqwqwq"
-                , "Hello", "world", "nice", "#win", "#win", "#win", "#qwe", "#eeee", "#morning"
-                , "#task", "$task", "#task", "#task", "#task", "#qwe", "#qwe", "#qwe", "#qwe", "#eeee");
-
-        // return:
-        // #qwe - 7
-        // #task - 4
-        // #win - 3
-        // #eeee - 3
-        // #qq - 2
-        getTopFiveHashTags(list);
-
-    }
-
+/**
+ * ProfiTsoft, task 2.
+ * Write a method that accepts as input a list of strings (text)
+ * that can contain hash tags (words starting with "").
+ * As a result, the method should return the top-5 most frequently mentioned hash tags,
+ * with the number of times each hash tag was mentioned.
+ * Multiple #same hashtags on the same line should count as one mention.
+ * Write unit tests for this method.
+ */
+public class HashTag {
+    public static Map<String, Integer> maps;
     public static Map<String, Integer> getTopFiveHashTags(List<String> text) {
 
         // write pairs in maps,
         // where key equals word with # and value equals amount of these words
-        Map<String, Integer> maps = new HashMap<>();
+        maps = new HashMap<>();
 
         // write to map elements that starts with #
         for (String element : text) {
+            // element that equals null will skiped
+            if(element == null) {
+                continue;
+            }
             if (element.startsWith("#")) {
                 int amountHashTags = maps.getOrDefault(element, 0) + 1;
                 maps.put(element, amountHashTags);
