@@ -10,7 +10,7 @@ import java.util.List;
 public class FigureSorterTest {
 
     @Test
-    void sortingFigures() {
+    public void sortingFigures() {
         Ball ball = new Ball(30);
         Cube cube = new Cube(15);
         Cylinder cylinder = new Cylinder(45,25);

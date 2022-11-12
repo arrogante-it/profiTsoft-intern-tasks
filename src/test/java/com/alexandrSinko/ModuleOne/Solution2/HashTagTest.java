@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class HashTagTest {
 
     @Test
-    void getTopFiveHashTags() {
+    public void getTopFiveHashTags() {
         List<String> current = new ArrayList<>();
         Collections.addAll(current, "qwe", "#qwe", "#qq", "#qq", "#qwe", "#eeee"
                 , "#qwerty", "qwe", "eqe", "www", "wqwqwq"

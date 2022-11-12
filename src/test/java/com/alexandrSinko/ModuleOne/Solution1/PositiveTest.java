@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class PositiveTest {
 
     @Test
-    void getPositiveSortedNumbers() {
+    public void getPositiveSortedNumbers() {
         int[] expected = Positive
                 .getPositiveSortedNumbers(new int[]{-7,-2,-3,0,5,3,2,1});
 
